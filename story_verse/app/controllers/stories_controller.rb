@@ -3,7 +3,7 @@ class StoriesController < ApplicationController
 @chapter = Chapter.new
 
   def index
-  	@stories = Story.all
+  	@stories = Story.all 
   end
 
   def show
