@@ -3,7 +3,7 @@ class StoriesController < ApplicationController
 @chapter = Chapter.new
 
   def index
-  	@stories = Story.all 
+  	@stories = Story.all
   end
 
   def show
@@ -45,5 +45,4 @@ private
         def get_story
           @story = Story.find(params[:id])
         end
-
 end
