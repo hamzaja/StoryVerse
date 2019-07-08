@@ -5,11 +5,11 @@ stories = ["Story1", "Story2","Story3","Story4","Story5"]
 chapters = ["Chapter1", "Chapter2","Chapter3","Chapter4","Chapter5"]
 
 stories.each do |story|
-  Story.create(name: story, description: description)
+  Story.create(name: story, description: "description")
 end
 
 chapters.each do |chapter|
-  Chapter.create(name: chapter, description: description)
+  Chapter.create(name: chapter, description: "description")
 end
 
 

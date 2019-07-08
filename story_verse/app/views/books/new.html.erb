@@ -1,0 +1,12 @@
+<h1>Choose a Chapter for Story</h1>
+
+
+<%= form_for @book do |f| %>
+  <%= f.label :name %><br>
+  <%= f.collection_select :story_id, @stories, :id, :name %><br>
+  <%= f.label :name %><br>
+  <%= f.collection_select :chapter_id, @chapters, :id, :name %><br>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Check this Story, story_path(@story) %>

@@ -1,4 +1,6 @@
 class StoriesController < ApplicationController
+@chapters = Chapter.all
+@chapter = Chapter.new
 
   def index
   	@stories = Story.all
