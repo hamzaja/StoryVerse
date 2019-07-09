@@ -1,4 +1,5 @@
 class ChaptersController < ApplicationController
+  before_action :authorized
 @stories = Story.all
 @story = Story.new
 
@@ -42,7 +43,7 @@ class ChaptersController < ApplicationController
             params.require(:chapter).permit(:name, :description)
           end
 
-          def get_chapter 
+          def get_chapter
             @chapter = Chapter.find(params[:id])
           end
 
