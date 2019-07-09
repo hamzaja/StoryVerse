@@ -6,7 +6,7 @@ class AuthController < ApplicationController
     @user = User.find_by(name: params[:username])
 
     if @user && @user.authenticate(params[:password])
-        
+
       flash[:message] = "Logging in #{@user.name}."
       session[:user_id] = @user.id
       redirect_to stories_path

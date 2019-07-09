@@ -10,6 +10,28 @@
   </head>
 
   <body>
-    <%= yield %>
+
+        <header>
+
+          <% if @logged_in %>
+            <p>
+              <center>Logged In As: <%= @current_user.name %></center>
+            </p>
+            <%= link_to "chapter", chapters_path %>
+            <%= button_to "Log Out", "/auth", method: :delete %>
+          <% else %>
+            <%= link_to "Home", stories_path %>
+            <%= link_to "Login", "/login" %>
+            <%= link_to "Register", new_user_path %>
+          <% end %>
+
+          <% if flash[:message] %>
+            <p class="message">
+              <%= flash[:message] %>
+            </p>
+          <% end %>
+
+        </header>
+        <%= yield %>
   </body>
 </html>
