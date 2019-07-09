@@ -42,7 +42,7 @@ class ChaptersController < ApplicationController
             params.require(:chapter).permit(:name, :description)
           end
 
-          def get_chapter
+          def get_chapter 
             @chapter = Chapter.find(params[:id])
           end
 
