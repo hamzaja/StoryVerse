@@ -40,7 +40,7 @@ class ChaptersController < ApplicationController
   private
 
       def chapter_params
-            params.require(:chapter).permit(:name, :description)
+            params.require(:chapter).permit(:name, :image)
           end
 
           def get_chapter
