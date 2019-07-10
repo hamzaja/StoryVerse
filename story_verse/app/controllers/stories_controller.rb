@@ -10,16 +10,10 @@ class StoriesController < ApplicationController
   end
 
   def new
-    @story = Story.new
+    @story  = @current_user.stories.create
   end
 
   def create
-    @current_user.stories.new(story_params)
-      if @story.save
-        redirect_to @story
-      else
-        render :new
-      end
    end
 
   def update

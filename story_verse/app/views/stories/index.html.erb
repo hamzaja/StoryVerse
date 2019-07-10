@@ -1,15 +1,13 @@
-<h1> stories index page </h1>
-<h1><center> Welcome to StoryVerse </h1></center>
+<h1><center> Welcome to StoryVerse <% if @current_user%>
+  <%=  @current_user.name  %>
+<% end %>
+</h1></center>
+<center><%= link_to "create a new story", new_story_path %></center>
 
 <center><h2> Heres a list of your stories</h2>
 
-<center><% @current_user.stories.each do |story| %>
-<p><%= link_to story.name , story %> </p>
-<% end %>
-
 <% if @current_user%>
-<h3> available stories </h3></center>
-<center><% @stories.each do |story| %>
+<center><% @current_user.stories.each do |story| %>
 <p><%= link_to story.name , story %> </p>
 <% end %>
   <% else puts "please login or register to see avaliable stories"  %>
