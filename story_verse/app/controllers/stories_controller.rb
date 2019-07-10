@@ -7,6 +7,7 @@ class StoriesController < ApplicationController
 
   def show
     get_story
+    @chapters = Chapter.all
   end
 
   def new

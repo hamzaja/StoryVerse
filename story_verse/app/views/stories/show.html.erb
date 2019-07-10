@@ -2,4 +2,5 @@
 <h1>  </h1>
 <center><%= @story.name %></center>
 <center><%= @story.description %></center>
+<center><%=  @story.chapters.pluck(:name)%> 
 <%= link_to "lets add chapters in that story", chapters_path  %>
