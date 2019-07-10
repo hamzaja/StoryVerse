@@ -1,9 +1,14 @@
 <h1> stories index page </h1>
 <h1><center> Welcome to StoryVerse </h1></center>
-<center><h2> Heres a list of stories</h2>
+
+<center><h2> Heres a list of your stories</h2>
+
+<center><% @current_user.stories.each do |story| %>
+<p><%= link_to story.name , story %> </p>
+<% end %>
 
 <% if @current_user%>
-<h3> pick one </h3></center>
+<h3> available stories </h3></center>
 <center><% @stories.each do |story| %>
 <p><%= link_to story.name , story %> </p>
 <% end %>
