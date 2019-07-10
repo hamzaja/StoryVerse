@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body{
+   margin: 42px;
+   background-image: url("paper.gif");
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  background-size: cover ;
+
+
+ }
+   /* h1 {
+    background-color: green;
+  } */
+
+div {
+  background-color: lightblue;
+}
+
+/* p {
+  background-color: yellow;
+} */
+
+a {
+
+}

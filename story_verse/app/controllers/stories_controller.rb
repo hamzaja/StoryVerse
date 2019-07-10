@@ -14,12 +14,12 @@ class StoriesController < ApplicationController
   end
 
   def create
-        @story = Story.new(story_params)
-        if @story.save
-          redirect_to @story
-        else
-          render :new
-        end
+    @current_user.stories.new(story_params)
+      if @story.save
+        redirect_to @story
+      else
+        render :new
+      end
    end
 
   def update

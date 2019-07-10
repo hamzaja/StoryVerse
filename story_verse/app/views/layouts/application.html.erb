@@ -17,7 +17,8 @@
             <p>
               <center>Logged In As: <%= @current_user.name %></center>
             </p>
-            <%= link_to "chapter", chapters_path %>
+            <%= link_to "All stories", stories_path%>
+            <%= link_to "All chapters", chapters_path %>
             <%= button_to "Log Out", "/auth", method: :delete %>
           <% else %>
             <%= link_to "Home", stories_path %>
