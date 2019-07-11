@@ -10,7 +10,7 @@
   <%= chapter.name %>
    <%= button_to "Delete this chapter 🗑", chapter_path, method: :delete %>
 
-   <img src="<%= chapter.image%>" style=“width:400px;height:500px"></br>
+   <img src="<%= chapter.image%>" style=“width:400px;height:500px"><br>
 <% end %>
 
    <%= link_to "add more chapters",  new_chapter_path %>
