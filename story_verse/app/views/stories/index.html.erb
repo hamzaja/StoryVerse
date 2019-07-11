@@ -1,16 +1,19 @@
-<h1><center> Welcome to StoryVerse <% if @current_user%>
-<%=  @current_user.name  %>
-<% end %>
-</h1></center>
-<center><%= link_to "create a new story", new_story_path %></center>
+<div class="welcomebox">
+<h1> Welcome to StoryVerse <%=  @current_user.name  %> </h1>
 
-<center><h2> Heres a list of your stories</h2>
+<div class="button"><%= link_to "create a new story", new_story_path %></div>
+
+<h2> Here is a list of your stories</h2>
 
 <% if @current_user%>
-<center><% @current_user.stories.each do |story| %>
-<p><%= link_to story.name , story %> </p>
+
+<% @current_user.stories.each do |story| %>
+<ul>
+  <span><li> <%= link_to story.name , story %> </li></span>
+</ul>
 <% end %>
-  <% else puts "please login or register to see avaliable stories"  %>
+<% else puts "please login or register to see avaliable stories"  %>
+
 <p> please login or register to see avaliable stories</p>
 <% end %>
-</center>
+</div>

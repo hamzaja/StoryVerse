@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<h1> chapter show page </h1>
-<%= @chapter.name %><br>
-<img src="<%= @chapter.image%>" style=“width:400px;height:500px">
-
-<%= link_to "add this chapter to your story"  %>
+<div class="chapter_show_box">
+  <h1> Chapter show page </h1>
+  <%= @chapter.name %><br>
+  <br>
+  <img src="<%= @chapter.image%>"><br />
+  <br>
+  <%= link_to "Add this chapter to your story"  %>
+</div>
