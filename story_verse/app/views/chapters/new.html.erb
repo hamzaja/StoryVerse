@@ -1,0 +1,15 @@
+<h1> chapters new page </h1>
+
+<% @chapters.each do |chapter| %>
+  <h1>Choose a Chapter for Story</h1>
+  <%= form_for @book do |f| %>
+    <%= f.label :name %><br>
+    <%= f.collection_select :story_id, @stories, :id, :name %><br>
+    <%= f.label :name %><br>
+    <%= f.collection_select :chapter_id, @chapters, :id, :name %><br>
+    <%= f.submit %>
+  <% end %>
+
+  <p><%= link_to "Click here to add #{chapter.name} to your story" %></p>
+  <img src="<%= chapter.image%>" style=“width:400px;height:500px">
+<% end %>

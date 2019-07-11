@@ -1,8 +1,12 @@
+
 <div class="welcomebox">
-<h1> Welcome to StoryVerse <%=  @current_user.name  %> </h1>
-
+<h1> Welcome to StoryVerse
+  <% if @current_user%> 
+  <%=  @current_user.name  %> 
+  <% end %></h1>
+<% if @logged_in %>
 <div class="button"><%= link_to "create a new story", new_story_path %></div>
-
+<% end %>
 <h2> Here is a list of your stories</h2>
 
 <% if @current_user%>
