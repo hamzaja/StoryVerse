@@ -13,7 +13,6 @@ class StoriesController < ApplicationController
   def new
     @story  = @current_user.stories.create
   end
-
   def create
    end
 

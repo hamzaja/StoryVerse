@@ -2,7 +2,6 @@ class ChaptersController < ApplicationController
   before_action :authorized
 @stories = Story.all
 @story = Story.new
-
     def index
     	@chapters = Chapter.all
     end
@@ -12,7 +11,12 @@ class ChaptersController < ApplicationController
     end
 
     def new
+      @stories = Story.all
+      @story = Story.new
+      @chapters = Chapter.all
       @chapter = Chapter.new
+      @book = Book.new
+
     end
 
     def create
@@ -46,5 +50,4 @@ class ChaptersController < ApplicationController
           def get_chapter
             @chapter = Chapter.find(params[:id])
           end
-
 end

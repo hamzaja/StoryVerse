@@ -2,8 +2,9 @@
 <%=  @current_user.name  %>
 <% end %>
 </h1></center>
+<% if @logged_in %>
 <center><%= link_to "create a new story", new_story_path %></center>
-
+<% end %>
 <center><h2> Heres a list of your stories</h2>
 
 <% if @current_user%>

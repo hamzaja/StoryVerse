@@ -1,4 +1,8 @@
 <h1> chapters index page </h1>
 <% @chapters.each do |chapters| %>
-<p><%= link_to chapters.name, chapters %></p>
+
+<p><%= link_to "Click here to add #{chapters.name} to your story", new_chapter_path %></p>
+<img src="<%= chapters.image%>" style=“width:400px;height:500px">
+
+
 <% end %>

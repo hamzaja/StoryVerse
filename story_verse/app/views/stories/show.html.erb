@@ -1,9 +1,16 @@
 <h1> Story show page </h1>
-<h1>  </h1>
+ <%= button_to "Delete this story 🗑", story_path(@story), method: :delete %>
+
+
 <center><%= @story.name %></center>
 <center><%= @story.description %></center>
+<p> Here's some chapters in your story </p>
+
 <center><%  @story.chapters.each do |chapter|%>
   <%= chapter.name %>
-   <img src="<%= chapter.image%>" style=“width:400px;height:500px">
-   <%= link_to "lets add chapters in that story", new_chapter_path  %>
+   <%= button_to "Delete this chapter 🗑", chapter_path, method: :delete %>
+
+   <img src="<%= chapter.image%>" style=“width:400px;height:500px"></br>
 <% end %>
+
+   <%= link_to "add more chapters",  new_chapter_path %>
