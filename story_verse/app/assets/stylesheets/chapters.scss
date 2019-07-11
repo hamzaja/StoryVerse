@@ -1,3 +1,56 @@
 // Place all the styles related to the Chapters controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.chapterbox {
+  background-color: grey;
+  padding: 20px;
+  height: 600px;
+  width: 300px;
+  text-align: center;
+  margin: 50px auto;
+  overflow-y: scroll;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul span
+{
+    display: block;
+}
+
+img {
+  height: 500px;
+  width: 400px;
+}
+
+.chapter_show_box {
+  padding: 20px;
+  height: 700px;
+  width: 500px;
+  text-align: center;
+  margin: 50px auto;
+  overflow-y: scroll;
+  background-color: white;
+  border-color: grey;
+  border-radius: 15px;
+  box-shadow: 3px 5px #E3DEDD;
+
+}

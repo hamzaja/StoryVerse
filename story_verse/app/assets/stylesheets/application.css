@@ -17,11 +17,13 @@
 
  body{
    margin: 42px;
-   background-image: url("paper.gif");
-  /* background-position: center; */
+   background-image: url(thumb-1920-914346.png);
+
+  background-position: center;
   /* background-repeat: no-repeat; */
   background-size: cover ;
-
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
 
  }
    /* h1 {
@@ -32,10 +34,33 @@ div {
   background-color: lightblue;
 }
 
-/* p {
-  background-color: yellow;
-} */
 
-a {
+/* NAV BAR  */
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.test {
+  align-items: center;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
 }

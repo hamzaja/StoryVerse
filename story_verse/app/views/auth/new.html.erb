@@ -1,7 +1,10 @@
-<h1>Log In</h1>
-
-<%= form_tag "/auth" do %>
-  <%= text_field_tag :username %>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Log In" %>
-<% end %>
+<div class="loginbox">
+  <h1>Log In</h1>
+  <%= form_tag "/auth" do %>
+    <%= text_field_tag :username %><br>
+    <br>
+    <%= password_field_tag :password %><br>
+    <br>
+    <%= submit_tag "Log In" %>
+  <% end %>
+</div>
