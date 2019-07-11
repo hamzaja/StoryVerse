@@ -20,12 +20,12 @@ class ChaptersController < ApplicationController
     end
 
     def create
-          @chapter = Chapter.new(chapter_params)
-          if @chapter.save
-            redirect_to @chapter
-          else
-            render :new
-          end
+          @chapter = Chapter.create(chapter_params)
+          # if @chapter.save
+          #   redirect_to "/chapters/new"
+          # else
+          #   render :new
+          redirect_to new_chapter_path
      end
 
     def update
