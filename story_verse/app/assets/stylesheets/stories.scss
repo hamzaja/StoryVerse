@@ -30,3 +30,16 @@
 a {
   text-decoration: none;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 400px 400px 400px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.story_show_page {
+  text-align: center;
+  margin: 50px auto;
+}
